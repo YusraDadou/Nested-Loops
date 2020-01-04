@@ -1,0 +1,32 @@
+int totalFrames = 120;
+int counter = 0;
+void setup()
+{
+ size(400,300);
+ background(0);
+ strokeWeight(2);
+ stroke(255);
+ 
+}
+ 
+ void draw()
+ {
+
+ 
+ float percent = counter / totalFrames;
+ render(percent);
+ 
+ for (int y=0; y<height; y=y+20){
+ for (int x=0; x< width; x=x+20){
+   fill (random(255));
+   rect(x,y,20,20);
+   
+   saveFrame("output/gif-####.png");
+ }
+ }
+ }
+ 
+ void render(float percent) {
+   background (0);
+   
+ }
